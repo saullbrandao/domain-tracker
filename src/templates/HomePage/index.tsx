@@ -1,7 +1,11 @@
+import { Form } from 'components/Form'
+import { Header } from 'components/Header'
+
 export function HomePage() {
   return (
-    <main>
-      <h1>Hello world</h1>
+    <main className="flex flex-col gap-8 justify-center items-center bg-pattern-bg">
+      <Header />
+      <Form />
     </main>
   )
 }

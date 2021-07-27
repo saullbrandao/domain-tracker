@@ -3,7 +3,7 @@ import { Input } from 'components/Input'
 
 export function Form() {
   return (
-    <form className="flex justify-between">
+    <form className="flex justify-between w-5/6">
       <Input />
       <Button />
     </form>

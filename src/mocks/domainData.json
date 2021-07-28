@@ -1,0 +1,12 @@
+{
+  "ip": "8.8.8.8",
+  "isp": "Google LLC",
+  "location": {
+    "region": "California",
+    "country": "US",
+    "postalCode": "94035",
+    "timezone": "-07:00",
+    "lat": 37.38605,
+    "lng": -122.08385
+  }
+}

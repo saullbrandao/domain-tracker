@@ -19,7 +19,7 @@ export function Form() {
 
   return (
     <form
-      className="flex justify-between w-5/6 lg:w-1/3 "
+      className="flex justify-between w-5/6 lg:w-1/3 shadow-md"
       onSubmit={handleSubmit}
     >
       <Input searchTerm={searchTerm} handleSearch={handleSearch} />

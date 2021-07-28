@@ -5,7 +5,7 @@ type DomainInfoProps = {
 
 export const DomainInfo = ({ info, title }: DomainInfoProps) => {
   return (
-    <article>
+    <article className="flex-1">
       <h3 className="uppercase text-gray-400 font-extrabold text-xs">
         {title}
       </h3>

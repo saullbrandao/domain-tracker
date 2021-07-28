@@ -15,7 +15,7 @@ export function HomePage() {
 
   return (
     <main className="flex flex-col h-screen w-screen">
-      <section className="flex flex-col gap-6 items-center bg-pattern-bg h-72 relative">
+      <section className="flex flex-col gap-6 items-center bg-pattern-bg bg-cover h-72 lg:h-56 relative">
         <Header />
         <Form />
         <DetailsSection />

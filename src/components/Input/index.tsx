@@ -1,10 +1,5 @@
-import { FormEvent } from 'react'
 import { useTracker } from 'src/hooks/useTracker'
-
-type InputProps = {
-  searchTerm: string
-  handleSearch: (event: FormEvent<HTMLInputElement>) => void
-}
+import { InputProps } from './types'
 
 export function Input({ searchTerm, handleSearch }: InputProps) {
   const { domain } = useTracker()

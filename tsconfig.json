@@ -5,7 +5,8 @@
       "components/*": ["./src/components/*"],
       "styles/*": ["./src/styles/*"],
       "templates/*": ["./src/templates/*"],
-      "services/*": ["./src/services/*"]
+      "services/*": ["./src/services/*"],
+      "mocks/*": ["./src/mocks/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

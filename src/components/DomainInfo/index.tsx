@@ -1,7 +1,4 @@
-type DomainInfoProps = {
-  title: string
-  info: string
-}
+import { DomainInfoProps } from './types'
 
 export const DomainInfo = ({ info, title }: DomainInfoProps) => {
   return (

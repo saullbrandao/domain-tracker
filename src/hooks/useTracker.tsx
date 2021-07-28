@@ -24,8 +24,8 @@ type Data = {
 }
 
 type TrackerContextType = {
-  domain: string | undefined
-  data: Data | undefined
+  domain: string
+  data: Data
   handleDomainChange: (searchTerm: string) => void
 }
 
@@ -50,8 +50,9 @@ export function TrackerContextProvider(props: TrackerContextProviderProps) {
           domain,
         },
       })
-
-      setData(res.data)
+      if (res.status === 200) {
+        setData(res.data)
+      }
     }
     domain && test()
   }, [domain])

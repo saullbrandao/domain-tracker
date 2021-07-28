@@ -1,9 +1,13 @@
+import { useEffect, useState } from 'react'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
-import markerIcon from '../../assets/icon-location.svg'
+import { useTracker } from 'src/hooks/useTracker'
 import * as L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
 const MapSection = () => {
+  const { data } = useTracker()
+  const [map, setMap] = useState<L.Map>()
+
   const icon = L.icon({
     iconUrl: 'icon-location.svg',
     iconSize: [46, 56],
@@ -11,18 +15,28 @@ const MapSection = () => {
     popupAnchor: [0, -32],
   })
 
+  useEffect(() => {
+    if (data.location) {
+      map?.flyTo([data?.location.lat, data?.location.lng], 16, {
+        duration: 4,
+      })
+    }
+  }, [data.location])
+
   return (
     <section className="flex-1 z-0 relative">
       <MapContainer
         className="w-full h-full"
-        center={[37.38605, -122.08385]}
+        center={[data?.location.lat, data?.location.lng]}
         zoom={16}
+        scrollWheelZoom={false}
+        whenCreated={map => setMap(map)}
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[37.38605, -122.08385]} icon={icon}>
+        <Marker position={[data?.location.lat, data?.location.lng]} icon={icon}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>

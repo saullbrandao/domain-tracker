@@ -26,6 +26,7 @@ type Data = {
 type TrackerContextType = {
   domain: string
   data: Data
+  isLoading: boolean
   handleDomainChange: (searchTerm: string) => void
 }
 
@@ -38,6 +39,7 @@ const TrackerContext = createContext({} as TrackerContextType)
 export function TrackerContextProvider(props: TrackerContextProviderProps) {
   const [data, setData] = useState<Data>(defaultData)
   const [domain, setDomain] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
 
   function handleDomainChange(searchTerm: string) {
     setDomain(searchTerm)
@@ -45,6 +47,7 @@ export function TrackerContextProvider(props: TrackerContextProviderProps) {
 
   useEffect(() => {
     async function test() {
+      setIsLoading(true)
       const res = await axios.get('/api/ipify', {
         params: {
           domain,
@@ -52,13 +55,16 @@ export function TrackerContextProvider(props: TrackerContextProviderProps) {
       })
       if (res.status === 200) {
         setData(res.data)
+        setIsLoading(false)
       }
     }
     domain && test()
   }, [domain])
 
   return (
-    <TrackerContext.Provider value={{ data, domain, handleDomainChange }}>
+    <TrackerContext.Provider
+      value={{ data, domain, handleDomainChange, isLoading }}
+    >
       {props.children}
     </TrackerContext.Provider>
   )

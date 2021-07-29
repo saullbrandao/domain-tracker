@@ -20,15 +20,16 @@ export function Form() {
   }
 
   return (
-    <form
-      className="flex flex-col w-5/6 lg:w-1/3 text-center"
-      onSubmit={handleSubmit}
-    >
+    <form className="flex flex-col w-5/6 lg:w-1/3 " onSubmit={handleSubmit}>
       <div className="flex justify-between w-full h-12 shadow-md">
         <Input searchTerm={searchTerm} handleSearch={handleSearch} />
         <Button />
       </div>
-      {isError && <span className="text-red-500">Something went wrong</span>}
+      {isError && (
+        <span className="text-white font-medium text-sm text-center">
+          Something went wrong!
+        </span>
+      )}
     </form>
   )
 }

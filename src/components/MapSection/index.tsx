@@ -21,6 +21,7 @@ const MapSection = () => {
         duration: 4,
       })
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data.location])
 
   return (

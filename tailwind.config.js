@@ -11,6 +11,13 @@ module.exports = {
       backgroundImage: theme => ({
         'pattern-bg': "url('/pattern-bg.png')",
       }),
+      colors: {
+        'gray-light': '#969696',
+        'gray-dark': '#2b2b2b',
+      },
+      fontFamily: {
+        rubik: ['Rubik', 'sans-serif'],
+      },
     },
   },
   variants: {

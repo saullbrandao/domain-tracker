@@ -4,7 +4,7 @@ import { FormEvent, SyntheticEvent, useState } from 'react'
 import { useTracker } from 'src/hooks/useTracker'
 
 export function Form() {
-  const { handleDomainChange } = useTracker()
+  const { handleDomainChange, isLoading } = useTracker()
   const [searchTerm, setSearchTerm] = useState('')
 
   function handleSearch(event: FormEvent<HTMLInputElement>) {
@@ -13,10 +13,11 @@ export function Form() {
 
   function handleSubmit(event: SyntheticEvent) {
     event.preventDefault()
-    searchTerm && handleDomainChange(searchTerm)
-    setSearchTerm('')
+    if (!isLoading && searchTerm) {
+      handleDomainChange(searchTerm)
+      setSearchTerm('')
+    }
   }
-  // TODO: disable submit when fetching the api
 
   return (
     <form
@@ -24,7 +25,7 @@ export function Form() {
       onSubmit={handleSubmit}
     >
       <Input searchTerm={searchTerm} handleSearch={handleSearch} />
-      <Button />
+      <Button disabled={isLoading} />
     </form>
   )
 }

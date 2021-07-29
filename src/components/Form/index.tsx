@@ -24,7 +24,7 @@ export function Form() {
       className="flex flex-col w-5/6 lg:w-1/3 text-center"
       onSubmit={handleSubmit}
     >
-      <div className="flex justify-between w-full h-12 lg:w-1/3 shadow-md">
+      <div className="flex justify-between w-full h-12 shadow-md">
         <Input searchTerm={searchTerm} handleSearch={handleSearch} />
         <Button />
       </div>

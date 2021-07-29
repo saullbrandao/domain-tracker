@@ -13,7 +13,6 @@ export function Button() {
       type="submit"
       disabled={isLoading}
     >
-      {/* TODO: show a loading spinner when fetching the api */}
       {isLoading ? <Loading /> : <Image src={arrow} alt="search button" />}
     </button>
   )

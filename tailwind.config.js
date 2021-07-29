@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'pattern-bg': "url('/pattern-bg.png')",
+        'pattern-bg': "url('/pattern-bg.webp')",
       }),
       colors: {
         'gray-light': '#969696',

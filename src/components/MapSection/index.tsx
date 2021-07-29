@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import { MapContainer, Marker, TileLayer } from 'react-leaflet'
 import { useTracker } from 'src/hooks/useTracker'
 import * as L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
@@ -29,18 +29,17 @@ const MapSection = () => {
         className="w-full h-full"
         center={[data?.location.lat, data?.location.lng]}
         zoom={16}
-        scrollWheelZoom={false}
+        // scrollWheelZoom={false}
         whenCreated={map => setMap(map)}
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={[data?.location.lat, data?.location.lng]} icon={icon}>
-          <Popup>
-            A pretty CSS3 popup. <br /> Easily customizable.
-          </Popup>
-        </Marker>
+        <Marker
+          position={[data?.location.lat, data?.location.lng]}
+          icon={icon}
+        ></Marker>
       </MapContainer>
     </section>
   )

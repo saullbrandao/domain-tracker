@@ -26,7 +26,7 @@ export function Form() {
     >
       <div className="flex justify-between w-full h-12 lg:w-1/3 shadow-md">
         <Input searchTerm={searchTerm} handleSearch={handleSearch} />
-        <Button disabled={isLoading} />
+        <Button />
       </div>
       {isError && <span className="text-red-500">Something went wrong</span>}
     </form>

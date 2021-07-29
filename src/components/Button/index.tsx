@@ -1,18 +1,20 @@
+import { Loading } from 'components/Loading'
 import Image from 'next/image'
 import arrow from 'public/icon-arrow.svg'
-import { Props } from './types'
+import { useTracker } from 'src/hooks/useTracker'
 
-export function Button({ disabled }: Props) {
+export function Button() {
+  const { isLoading } = useTracker()
   return (
     <button
-      className={`bg-black px-5 min-w-max h-full py-3 rounded-r-xl hover:bg-gray-dark ${
-        disabled && 'cursor-not-allowed'
+      className={`bg-black px-5 w-14 h-full py-3 rounded-r-xl hover:bg-gray-dark ${
+        isLoading && 'cursor-not-allowed'
       }`}
       type="submit"
-      disabled={disabled}
+      disabled={isLoading}
     >
       {/* TODO: show a loading spinner when fetching the api */}
-      <Image src={arrow} alt="search button" />
+      {isLoading ? <Loading /> : <Image src={arrow} alt="search button" />}
     </button>
   )
 }

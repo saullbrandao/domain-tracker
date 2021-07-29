@@ -16,10 +16,11 @@ export function Form() {
     searchTerm && handleDomainChange(searchTerm)
     setSearchTerm('')
   }
+  // TODO: disable submit when fetching the api
 
   return (
     <form
-      className="flex justify-between w-5/6 lg:w-1/3 shadow-md"
+      className="flex justify-between w-5/6 h-12 lg:w-1/3 shadow-md"
       onSubmit={handleSubmit}
     >
       <Input searchTerm={searchTerm} handleSearch={handleSearch} />

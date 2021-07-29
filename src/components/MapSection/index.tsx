@@ -29,7 +29,6 @@ const MapSection = () => {
         className="w-full h-full"
         center={[data?.location.lat, data?.location.lng]}
         zoom={16}
-        // scrollWheelZoom={false}
         whenCreated={map => setMap(map)}
       >
         <TileLayer

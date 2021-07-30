@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://ip-address-tracker-saullbrandao.vercel.app/">
-    <img src="https://raw.githubusercontent.com/saullbrandao/ip-address-tracker/main/logo.png" alt="Logo" width="335" height="80">
+    <img src="https://raw.githubusercontent.com/saullbrandao/ip-address-tracker/main/logo.png" alt="Logo">
   </a>
 
   <p align="center">

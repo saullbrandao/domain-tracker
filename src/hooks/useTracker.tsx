@@ -8,6 +8,7 @@ import {
 } from 'react'
 import defaultData from 'mocks/domainData.json'
 import { ipApi } from 'services/ipApi'
+import toast from 'react-hot-toast'
 
 type Location = {
   region: string
@@ -48,6 +49,12 @@ export function TrackerContextProvider(props: TrackerContextProviderProps) {
     setDomain(searchTerm)
   }
 
+  const notify = () =>
+    toast.error('Please disable ad-blocker.', {
+      duration: 3000,
+      position: 'top-right',
+    })
+
   useEffect(() => {
     async function getUserIpInformation() {
       try {
@@ -58,7 +65,7 @@ export function TrackerContextProvider(props: TrackerContextProviderProps) {
           throw new Error('error')
         }
       } catch (err) {
-        // TODO: add a notification to disable adblock
+        notify()
         console.log(err)
       }
     }

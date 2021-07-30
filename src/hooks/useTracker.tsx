@@ -7,6 +7,7 @@ import {
   useState,
 } from 'react'
 import defaultData from 'mocks/domainData.json'
+import { ipApi } from 'services/ipApi'
 
 type Location = {
   region: string
@@ -50,9 +51,9 @@ export function TrackerContextProvider(props: TrackerContextProviderProps) {
   useEffect(() => {
     async function getUserIpInformation() {
       try {
-        const res = await axios.get('https://geolocation-db.com/json/')
+        const res = await ipApi.get('https://api.ipify.org/?format=json')
         if (res.status === 200) {
-          setDomain(res.data.IPv4)
+          setDomain(res.data.ip)
         } else {
           throw new Error('error')
         }

@@ -54,6 +54,7 @@
 - [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)
 - [Leaflet](https://github.com/Leaflet/Leaflet)
 - [React Leaflet](https://github.com/PaulLeCam/react-leaflet)
+- [React Hot Toast](https://github.com/timolins/react-hot-toast)
 
 # :rocket: Getting Started
 

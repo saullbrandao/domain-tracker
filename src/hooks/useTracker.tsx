@@ -48,7 +48,27 @@ export function TrackerContextProvider(props: TrackerContextProviderProps) {
   }
 
   useEffect(() => {
-    async function test() {
+    async function getUserIpInformation() {
+      setIsError(false)
+      setIsLoading(true)
+
+      try {
+        const res = await axios.get('/api/ipify')
+        if (res.status === 200) {
+          setData(res.data)
+        } else {
+          throw new Error('error')
+        }
+      } catch (err) {
+        setIsError(true)
+      }
+      setIsLoading(false)
+    }
+    getUserIpInformation()
+  }, [])
+
+  useEffect(() => {
+    async function getIpInformation() {
       setIsError(false)
       setIsLoading(true)
 
@@ -68,7 +88,7 @@ export function TrackerContextProvider(props: TrackerContextProviderProps) {
       }
       setIsLoading(false)
     }
-    domain && test()
+    domain && getIpInformation()
   }, [domain])
 
   return (

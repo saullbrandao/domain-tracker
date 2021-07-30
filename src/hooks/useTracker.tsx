@@ -49,20 +49,17 @@ export function TrackerContextProvider(props: TrackerContextProviderProps) {
 
   useEffect(() => {
     async function getUserIpInformation() {
-      setIsError(false)
-      setIsLoading(true)
-
       try {
-        const res = await axios.get('/api/ipify')
+        const res = await axios.get('https://geolocation-db.com/json/')
         if (res.status === 200) {
-          setData(res.data)
+          setDomain(res.data.IPv4)
         } else {
           throw new Error('error')
         }
       } catch (err) {
-        setIsError(true)
+        // TODO: add a notification to disable adblock
+        console.log(err)
       }
-      setIsLoading(false)
     }
     getUserIpInformation()
   }, [])

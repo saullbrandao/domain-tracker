@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { api } from 'services/api'
+import { geoApi } from 'services/geoApi'
 
 type Location = {
   region: string
@@ -25,9 +25,9 @@ export default async function handler(
   res: NextApiResponse<Data | Error>,
 ) {
   try {
-    const { data } = await api.get('', {
+    const { data } = await geoApi.get('', {
       params: {
-        apiKey: process.env.NEXT_API_KEY,
+        apiKey: process.env.NEXT_GEO_API_KEY,
         domain: req.query.domain,
       },
     })

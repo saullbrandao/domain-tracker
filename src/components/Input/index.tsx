@@ -8,7 +8,7 @@ export function Input({ searchTerm, handleSearch }: InputProps) {
     <input
       className="rounded-l-xl pl-5 focus:outline-none focus:ring-2 focus:ring-black focus:ring-inset flex-1 h-full"
       type="text"
-      placeholder={domain || 'type a domain'}
+      placeholder={domain || 'Search for any IP address or domain'}
       value={searchTerm}
       onChange={handleSearch}
     />

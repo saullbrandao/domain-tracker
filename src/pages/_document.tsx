@@ -20,7 +20,11 @@ class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
             rel="stylesheet"
-          ></link>
+          />
+          <meta
+            name="description"
+            content="See key information and location of any domain you want to search"
+          />
         </Head>
         <body>
           <Main />

@@ -1,16 +1,13 @@
-import { useTracker } from 'hooks/useTracker'
-import { InputProps } from './types'
+import { InputHTMLAttributes } from 'react'
 
-export function Input({ searchTerm, handleSearch }: InputProps) {
-  const { domain } = useTracker()
-
+export function Input({
+  className,
+  ...props
+}: InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
       className="rounded-l-xl pl-5 focus:outline-none focus:ring-2 focus:ring-black focus:ring-inset flex-1 h-full"
-      type="text"
-      placeholder={domain || 'Search for any IP address or domain'}
-      value={searchTerm}
-      onChange={handleSearch}
+      {...props}
     />
   )
 }

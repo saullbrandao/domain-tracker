@@ -8,7 +8,7 @@ import arrow from 'public/icon-arrow.svg'
 import { ErrorMessage } from 'components/ErrorMessage'
 
 export function Form() {
-  const { handleDomainChange, isLoading, isError } = useTracker()
+  const { handleDomainChange, domain, isLoading, isError } = useTracker()
   const [searchTerm, setSearchTerm] = useState('')
 
   function handleSearch(event: FormEvent<HTMLInputElement>) {
@@ -29,7 +29,12 @@ export function Form() {
       onSubmit={handleSubmit}
     >
       <div className="flex justify-between w-full h-12 shadow-md">
-        <Input searchTerm={searchTerm} handleSearch={handleSearch} />
+        <Input
+          type="text"
+          placeholder={domain || 'Search for any IP address or domain'}
+          value={searchTerm}
+          onChange={handleSearch}
+        />
         <Button
           type="submit"
           disabled={isLoading}

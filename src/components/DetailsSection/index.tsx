@@ -1,5 +1,5 @@
 import { DomainInfo } from 'components/DomainInfo'
-import { useTracker } from 'src/hooks/useTracker'
+import { useTracker } from 'hooks/useTracker'
 
 export function DetailsSection() {
   const { data } = useTracker()

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { MapContainer, Marker, TileLayer } from 'react-leaflet'
-import { useTracker } from 'src/hooks/useTracker'
+import { useTracker } from 'hooks/useTracker'
 import * as L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 

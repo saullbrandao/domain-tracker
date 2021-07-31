@@ -1,7 +1,7 @@
 import { Loading } from 'components/Loading'
 import Image from 'next/image'
 import arrow from 'public/icon-arrow.svg'
-import { useTracker } from 'src/hooks/useTracker'
+import { useTracker } from 'hooks/useTracker'
 
 export function Button() {
   const { isLoading } = useTracker()

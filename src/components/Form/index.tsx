@@ -1,7 +1,7 @@
 import { Button } from 'components/Button'
 import { Input } from 'components/Input'
 import { FormEvent, SyntheticEvent, useState } from 'react'
-import { useTracker } from 'src/hooks/useTracker'
+import { useTracker } from 'hooks/useTracker'
 
 export function Form() {
   const { handleDomainChange, isLoading, isError } = useTracker()

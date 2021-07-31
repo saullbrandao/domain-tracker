@@ -1,7 +1,7 @@
-import 'styles/globals.css'
-import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import { TrackerContextProvider } from 'src/hooks/useTracker'
+import type { AppProps } from 'next/app'
+import { TrackerContextProvider } from 'hooks/useTracker'
+import 'styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

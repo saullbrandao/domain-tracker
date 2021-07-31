@@ -1,4 +1,4 @@
-import { useTracker } from 'src/hooks/useTracker'
+import { useTracker } from 'hooks/useTracker'
 import { InputProps } from './types'
 
 export function Input({ searchTerm, handleSearch }: InputProps) {

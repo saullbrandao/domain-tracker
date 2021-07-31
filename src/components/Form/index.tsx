@@ -5,6 +5,7 @@ import { useTracker } from 'hooks/useTracker'
 import { Loading } from 'components/Loading'
 import Image from 'next/image'
 import arrow from 'public/icon-arrow.svg'
+import { ErrorMessage } from 'components/ErrorMessage'
 
 export function Form() {
   const { handleDomainChange, isLoading, isError } = useTracker()
@@ -37,13 +38,7 @@ export function Form() {
           {isLoading ? <Loading /> : <Image src={arrow} alt="search button" />}
         </Button>
       </div>
-      {isError && (
-        <div className="bg-white px-2 py-1 rounded-lg ">
-          <span className="text-red-500 font-medium text-sm">
-            Something went wrong!
-          </span>
-        </div>
-      )}
+      {isError && <ErrorMessage />}
     </form>
   )
 }

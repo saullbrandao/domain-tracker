@@ -2,6 +2,9 @@ import { Button } from 'components/Button'
 import { Input } from 'components/Input'
 import { FormEvent, SyntheticEvent, useState } from 'react'
 import { useTracker } from 'hooks/useTracker'
+import { Loading } from 'components/Loading'
+import Image from 'next/image'
+import arrow from 'public/icon-arrow.svg'
 
 export function Form() {
   const { handleDomainChange, isLoading, isError } = useTracker()
@@ -26,7 +29,13 @@ export function Form() {
     >
       <div className="flex justify-between w-full h-12 shadow-md">
         <Input searchTerm={searchTerm} handleSearch={handleSearch} />
-        <Button />
+        <Button
+          type="submit"
+          disabled={isLoading}
+          className={isLoading ? 'cursor-not-allowed' : ''}
+        >
+          {isLoading ? <Loading /> : <Image src={arrow} alt="search button" />}
+        </Button>
       </div>
       {isError && (
         <div className="bg-white px-2 py-1 rounded-lg ">

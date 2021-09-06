@@ -29,6 +29,11 @@ const MapSection = () => {
         className="w-full h-full"
         center={[data?.location.lat, data?.location.lng]}
         zoom={16}
+        maxBounds={[
+          [-180, 180],
+          [180, -180],
+        ]}
+        style={{ height: '100%', width: '100%' }}
         whenCreated={map => setMap(map)}
       >
         <TileLayer

@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://domain-tracker-saullbrandao.vercel.app/">
+  <a href="https://domain-tracker-orcin-delta.vercel.app/">
     <img src="https://raw.githubusercontent.com/saullbrandao/domain-tracker-tracker/main/logo.png" alt="Logo">
   </a>
 

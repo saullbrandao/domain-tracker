@@ -1,8 +1,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://ip-address-tracker-saullbrandao.vercel.app/">
-    <img src="https://raw.githubusercontent.com/saullbrandao/ip-address-tracker/main/logo.png" alt="Logo">
+  <a href="https://domain-tracker-saullbrandao.vercel.app/">
+    <img src="https://raw.githubusercontent.com/saullbrandao/domain-tracker-tracker/main/logo.png" alt="Logo">
   </a>
 
   <p align="center">
@@ -13,10 +13,10 @@
       <img alt="Saull Brandão" src="https://img.shields.io/badge/-saullbrandao-0A66C2?style=flat&logo=Linkedin&logoColor=white" />
     </a>
     <a href="./LICENSE">
-      <img alt="License MIT" src="https://img.shields.io/github/license/saullbrandao/ip-address-tracker" />
+      <img alt="License MIT" src="https://img.shields.io/github/license/saullbrandao/domain-tracker" />
     </a>
-    <a href="https://github.com/saullbrandao/ip-address-tracker/issues">
-    <img alt="Issues" src="https://img.shields.io/github/issues/saullbrandao/ip-address-tracker" />
+    <a href="https://github.com/saullbrandao/domain-tracker/issues">
+    <img alt="Issues" src="https://img.shields.io/github/issues/saullbrandao/domain-tracker" />
     </a>
   </p>
   <h2 align="center">IP Address Tracker</h2>
@@ -40,7 +40,7 @@
 
 # :page_with_curl: About the Project
 
-![ip-address-tracker](https://raw.githubusercontent.com/saullbrandao/ip-address-tracker/main/ip-address-tracker.png)
+![domain-tracker](https://raw.githubusercontent.com/saullbrandao/domain-tracker/main/demo.png)
 
 - Show user's ip information on first page load
 - Search for any IP addresses or domains and see the key information and
@@ -69,7 +69,7 @@ You will need to install Node.js and yarn
 
 ```sh
 # Clone Repository
-$ git clone https://github.com/saullbrandao/ip-address-tracker.git && cd ip-address-tracker
+$ git clone https://github.com/saullbrandao/domain-tracker.git && cd domain-tracker
 
 # Install Dependencies
 $ yarn
@@ -84,7 +84,7 @@ This starts the development server on http://localhost:3000/
 
 # :interrobang: Issues
 
-Create a <a href="https://github.com/saullbrandao/ip-address-tracker/issues">new
+Create a <a href="https://github.com/saullbrandao/domain-tracker/issues">new
 issue report</a>, it will be an honor to be able to help you solve and further
 improve our application.
 

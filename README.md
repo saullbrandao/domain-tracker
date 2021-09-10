@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://domain-tracker-orcin-delta.vercel.app/">
-    <img src="https://raw.githubusercontent.com/saullbrandao/domain-tracker-tracker/main/logo.png" alt="Logo">
+    <img src="https://raw.githubusercontent.com/saullbrandao/domain-tracker/main/logo.png" alt="Logo">
   </a>
 
   <p align="center">

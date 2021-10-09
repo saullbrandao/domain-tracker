@@ -8,6 +8,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Domain Tracker</title>
+        <meta
+          name="description"
+          content="See information about any domain or IP address"
+        />
         <link
           rel="stylesheet"
           href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"

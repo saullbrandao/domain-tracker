@@ -1,6 +1,6 @@
 <!-- PROJECT LOGO -->
 <br />
-<p align="center">
+<div align="center">
   <a href="https://domain-tracker-orcin-delta.vercel.app/">
     <img src="https://raw.githubusercontent.com/saullbrandao/domain-tracker/main/logo.png" alt="Logo">
   </a>
@@ -25,7 +25,10 @@
     See information about any domain or IP address
     <br />
     </p>
-</p>
+      <p align="center">
+    Challenge by <a href="https://www.frontendmentor.io/challenges/ip-address-tracker-I8-0yYAH0">Frontend Mentor</a>
+  </p>
+</div>
 
 # :bookmark_tabs: Table of Contents
 
